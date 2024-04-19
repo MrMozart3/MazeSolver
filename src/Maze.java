@@ -9,8 +9,21 @@ public class Maze {
     public static int CHAR_LF = 10;
     private int sizeX, sizeY;
     private int startY, startX, endY, endX;
+    boolean loaded;
     private List<List<MazeWindow>> windows = new ArrayList<>();
+    //
+    Maze(){
+        sizeX = -1;
+        sizeY = -1;
+        startY = -1;
+        startX = -1;
+        endY = -1;
+        endX = -1;
+        loaded = false;
+    }
+    //methods
     void SaveMazeFromFile(String fileName) throws IOException {
+        this.loaded = false;
         FileInputStream fis = null;
         List<String> rawMaze = new ArrayList<>();
         try{
@@ -24,7 +37,7 @@ public class Maze {
         boolean isUsedLine = false;
         rawMaze.add("");
         while((c = fis.read()) != -1){
-            if(c == CHAR_CR || c == CHAR_LF){
+            if(c == Maze.CHAR_CR || c == Maze.CHAR_LF){
                 if(isUsedLine){
                     rawMaze.add("");
                     tempY++;
@@ -99,7 +112,7 @@ public class Maze {
         //sizeX and sizeY
         this.sizeX = rawMaze.getFirst().length() / 2;
         this.sizeY = rawMaze.size() / 2;
-        if(sizeX < 2 || sizeY < 2){
+        if(this.sizeX < 2 || this.sizeY < 2){
             System.out.println("Zbyt maly Labirynt");
             return;
         }
@@ -118,18 +131,76 @@ public class Maze {
                     tempWindow.setWall(i,tempChar != ' ');
                     //start | end
                     if(tempChar == 'P'){
-                        startY = y / 2;
-                        startX = x / 2;
+                        this.startY = y / 2;
+                        this.startX = x / 2;
                     }else if(tempChar == 'K'){
-                        endY = y / 2;
-                        endX = x / 2;
+                        this.endY = y / 2;
+                        this.endX = x / 2;
                     }
                 }
-                tempWindow.setDistance(-1);
+                tempWindow.setDistance(Integer.MAX_VALUE);
                 tempList.add(tempWindow);
             }
             windows.add(tempList);
         }
+        //loaded finished successfully
+        this.loaded = true;
+    }
+    void FillMazeWithDistances(){
+        if(!loaded){
+            System.out.println("Labirynt niezaladowany");
+            return;
+        }
+        int y = this.endY, x = this.endX;
+        int distance = 1;
+
+        int[] modY = {-1, 1, 0, 0};
+        int[] modX = {0, 0, -1, 1};
+
+        boolean repeatLoop = true;
+
+        while(true)
+        {
+            repeatLoop = false;
+            //updating distance
+            if(windows.get(y).get(x).getDistance() > distance) windows.get(y).get(x).setDistance(distance);
+            //checking for higher values
+            for(int i = 0; i <4; i++){
+                if(y + modY[i] >= 0 && y + modY[i] < this.sizeY && x + modX[i] >= 0 && x + modX[i] < this.sizeX) {
+                    if (!windows.get(y).get(x).getWall(i) && windows.get(y + modY[i]).get(x + modX[i]).getDistance() > distance + 1) {
+                        y += modY[i];
+                        x += modX[i];
+                        distance++;
+                        repeatLoop = true;
+                        break;
+                    }
+                }
+            }
+            if(repeatLoop) continue;
+            //checking for lower values
+            for(int i = 0; i <4; i++) {
+                if(y + modY[i] >= 0 && y + modY[i] < this.sizeY && x + modX[i] >= 0 && x + modX[i] < this.sizeX){
+                    if (!windows.get(y).get(x).getWall(i) && windows.get(y + modY[i]).get(x + modX[i]).getDistance() == distance - 1) {
+                        y += modY[i];
+                        x += modX[i];
+                        distance--;
+                        repeatLoop = true;
+                        break;
+                    }
+                }
+            }
+            if(repeatLoop) continue;
+            //if value 1(break loop)
+            break;
+        }
+    }
+    MazeWindow getWindow(int x, int y)
+    {
+        if(x >= 0 && x < sizeX && y >= 0 && y < sizeY)
+        {
+            return windows.get(y).get(x);
+        }
+        return null;
     }
 
 }

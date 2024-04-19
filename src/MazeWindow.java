@@ -31,7 +31,7 @@ public class MazeWindow {
     {
         if(wallIndex < 0 || wallIndex > 3) {
             System.out.println("Wrong Wall Index");
-            return false;
+            return true;
         }
         else{
             return walls[wallIndex];
