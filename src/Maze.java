@@ -8,10 +8,12 @@ public class Maze {
     public static int CHAR_CR = 13;
     public static int CHAR_LF = 10;
     private int sizeX, sizeY;
+
     private int startY, startX, endY, endX;
+
     boolean loaded;
     private List<List<MazeWindow>> windows = new ArrayList<>();
-    //
+    //constructors
     Maze(){
         sizeX = -1;
         sizeY = -1;
@@ -21,8 +23,45 @@ public class Maze {
         endX = -1;
         loaded = false;
     }
+
+    //encapsulation
+    public int getSizeY(){ return this.sizeY; }
+    public int getSizeX(){ return this.sizeX; }
+
+
+    public int getStartY(){ return this.startY; }
+    public void setStartY(int startY){
+        if(startY >= 0 && startY < sizeY) {
+            this.startY = startY;
+        }
+        else MainFrame.mesLabel.CustomError("ERROR WHEN SETTING START Y");
+    }
+    public int getStartX(){ return this.startX; }
+    public void setStartX(int startX){
+        if(startX >= 0 && startX < sizeX) {
+            this.startX = startX;
+        }
+        else MainFrame.mesLabel.CustomError("ERROR WHEN SETTING START X");
+    }
+
+
+    public int getEndY(){ return this.endY; }
+    public void setEndY(int endY){
+        if(endY >= 0 && endY < sizeY) {
+            this.endY = endY;
+        }
+        else MainFrame.mesLabel.CustomError("ERROR WHEN SETTING START Y");
+    }
+    public int getEndX(){ return this.endX; }
+    public void setEndX(int endX){
+        if(endX >= 0 && endX < sizeX) {
+            this.endX = endX;
+        }
+        else MainFrame.mesLabel.CustomError("ERROR WHEN SETTING START X");
+    }
+
     //methods
-    void SaveMazeFromFile(String fileName) throws IOException {
+    void SaveMazeFromTextFile(String fileName)  {
         this.loaded = false;
         FileInputStream fis = null;
         List<String> rawMaze = new ArrayList<>();
@@ -36,7 +75,12 @@ public class Maze {
         int c, tempY = 0;
         boolean isUsedLine = false;
         rawMaze.add("");
-        while((c = fis.read()) != -1){
+        while(true){
+            try {
+                if ((c = fis.read()) == -1) break;
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
             if(c == Maze.CHAR_CR || c == Maze.CHAR_LF){
                 if(isUsedLine){
                     rawMaze.add("");
@@ -50,7 +94,7 @@ public class Maze {
             }
         }
         //removing last
-        if(rawMaze.getLast().equals("")) rawMaze.removeLast();
+        if(rawMaze.getLast().isEmpty()) rawMaze.removeLast();
         //checking if not odd
         if(rawMaze.getFirst().length() % 2 == 0 || rawMaze.size() % 2 == 0){
             System.out.println("Blad w pliku z danymi |1|");

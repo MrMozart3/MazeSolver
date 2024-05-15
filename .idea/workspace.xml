@@ -4,11 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ff61fd88-ea13-43d5-9ae3-cfe629b2e4b1" name="Changes" comment="Maze class, Maze Window class, savefromfile function">
+    <list default="true" id="ff61fd88-ea13-43d5-9ae3-cfe629b2e4b1" name="Changes" comment="Added FillWithDistances Method">
+      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mazes/maze_200.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mazes/maze_3.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mazes/maze_50.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mazes/maze_512.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/BorderColor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/MainFrame.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/MazePanel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/MazeWindowPanel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/MessageLabel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/NavigationBarPanel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/StartEndButton.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Maze.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Maze.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MazeWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MazeWindow.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,6 +31,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Enum" />
         <option value="Class" />
       </list>
     </option>
@@ -39,6 +53,7 @@
     &quot;Application.Main.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
@@ -57,6 +72,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\MrMozartOfficial\IdeaProjects\MazeCheckerTemporary\mazes" />
       <recent name="C:\Users\MrMozartOfficial\IdeaProjects\MazeCheckerTemporary\src" />
     </key>
   </component>
@@ -87,7 +103,19 @@
       <workItem from="1713452071084" duration="15393000" />
       <workItem from="1713476623024" duration="129000" />
       <workItem from="1713476760658" duration="1141000" />
-      <workItem from="1713540173271" duration="1554000" />
+      <workItem from="1713540173271" duration="2917000" />
+      <workItem from="1713636412609" duration="622000" />
+      <workItem from="1713980718710" duration="2176000" />
+      <workItem from="1714083696512" duration="3219000" />
+      <workItem from="1714337173770" duration="1342000" />
+      <workItem from="1714347557068" duration="621000" />
+      <workItem from="1714397182255" duration="21000" />
+      <workItem from="1714398341877" duration="1317000" />
+      <workItem from="1714752048528" duration="5000" />
+      <workItem from="1715697790883" duration="934000" />
+      <workItem from="1715699246956" duration="7514000" />
+      <workItem from="1715711557375" duration="5533000" />
+      <workItem from="1715766122755" duration="9270000" />
     </task>
     <task id="LOCAL-00001" summary="Second commit">
       <option name="closed" value="true" />
@@ -105,15 +133,35 @@
       <option name="project" value="LOCAL" />
       <updated>1713476935664</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Added FillWithDistances Method">
+      <option name="closed" value="true" />
+      <created>1713541885251</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1713541885251</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Second commit" />
     <MESSAGE value="Maze class, Maze Window class, savefromfile function" />
-    <option name="LAST_COMMIT_MESSAGE" value="Maze class, Maze Window class, savefromfile function" />
+    <MESSAGE value="Added FillWithDistances Method" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added FillWithDistances Method" />
   </component>
 </project>
