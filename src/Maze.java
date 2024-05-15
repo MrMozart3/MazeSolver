@@ -11,7 +11,7 @@ public class Maze {
 
     private int startY, startX, endY, endX;
 
-    boolean loaded;
+    boolean loaded, solved;
     private List<List<MazeWindow>> windows = new ArrayList<>();
     //constructors
     Maze(){
@@ -30,34 +30,32 @@ public class Maze {
 
 
     public int getStartY(){ return this.startY; }
-    public void setStartY(int startY){
-        if(startY >= 0 && startY < sizeY) {
-            this.startY = startY;
-        }
-        else MainFrame.mesLabel.CustomError("ERROR WHEN SETTING START Y");
-    }
     public int getStartX(){ return this.startX; }
-    public void setStartX(int startX){
-        if(startX >= 0 && startX < sizeX) {
-            this.startX = startX;
+    public void setStart(int startX, int startY){
+        if(startX < 0 || startX >= this.sizeX || startY < 0 || startY >= this.sizeY){
+            MainFrame.mesLabel.CustomError("START OUT OF BOUNDS");
+            return;
         }
-        else MainFrame.mesLabel.CustomError("ERROR WHEN SETTING START X");
+        if(startX == this.endX && startY == this.endY){
+            MainFrame.mesLabel.CustomError("CANNOT SET START POSITION TO END POSITION");
+            return;
+        }
+        this.startX = startX;
+        this.startY = startY;
     }
-
-
     public int getEndY(){ return this.endY; }
-    public void setEndY(int endY){
-        if(endY >= 0 && endY < sizeY) {
-            this.endY = endY;
-        }
-        else MainFrame.mesLabel.CustomError("ERROR WHEN SETTING START Y");
-    }
     public int getEndX(){ return this.endX; }
-    public void setEndX(int endX){
-        if(endX >= 0 && endX < sizeX) {
-            this.endX = endX;
+    public void setEnd(int endX, int endY){
+        if(endX < 0 || endX >= this.sizeX || endY < 0 || endY >= this.sizeY){
+            MainFrame.mesLabel.CustomError("END OUT OF BOUNDS");
+            return;
         }
-        else MainFrame.mesLabel.CustomError("ERROR WHEN SETTING START X");
+        if(endX == this.startX && endY == this.startY){
+            MainFrame.mesLabel.CustomError("CANNOT SET END POSITION TO START POSITION");
+            return;
+        }
+        this.endX = endX;
+        this.endY = endY;
     }
 
     //methods

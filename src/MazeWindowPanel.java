@@ -30,7 +30,7 @@ public class MazeWindowPanel extends JPanel {
         button.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                //
+                maze.WindowCLicked(y, x);
             }
         });
         this.add(button);

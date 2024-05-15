@@ -4,24 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ff61fd88-ea13-43d5-9ae3-cfe629b2e4b1" name="Changes" comment="Added FillWithDistances Method">
-      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mazes/maze_200.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mazes/maze_3.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mazes/maze_50.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mazes/maze_512.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/BorderColor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MainFrame.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MazePanel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MazeWindowPanel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MessageLabel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/NavigationBarPanel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/StartEndButton.java" afterDir="false" />
+    <list default="true" id="ff61fd88-ea13-43d5-9ae3-cfe629b2e4b1" name="Changes" comment="Added UI to display mazes, file text import">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MainFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainFrame.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Maze.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Maze.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MazePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MazePanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MazeWindowPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MazeWindowPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/NavigationBarPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/NavigationBarPanel.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,28 +37,28 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Main.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\MrMozartOfficial\IdeaProjects\MazeCheckerTemporary\mazes" />
@@ -115,7 +104,7 @@
       <workItem from="1715697790883" duration="934000" />
       <workItem from="1715699246956" duration="7514000" />
       <workItem from="1715711557375" duration="5533000" />
-      <workItem from="1715766122755" duration="9270000" />
+      <workItem from="1715766122755" duration="11984000" />
     </task>
     <task id="LOCAL-00001" summary="Second commit">
       <option name="closed" value="true" />
@@ -141,7 +130,15 @@
       <option name="project" value="LOCAL" />
       <updated>1713541885251</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Added UI to display mazes, file text import">
+      <option name="closed" value="true" />
+      <created>1715775738116</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1715775738116</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -162,6 +159,7 @@
     <MESSAGE value="Second commit" />
     <MESSAGE value="Maze class, Maze Window class, savefromfile function" />
     <MESSAGE value="Added FillWithDistances Method" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added FillWithDistances Method" />
+    <MESSAGE value="Added UI to display mazes, file text import" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added UI to display mazes, file text import" />
   </component>
 </project>

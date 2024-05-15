@@ -8,7 +8,6 @@ import java.io.File;
 
 public class MainFrame extends JFrame {
     public static MessageLabel mesLabel;
-    public static int currentlyPressedNav = 0;
     private final NavigationBarPanel navBar;
     MainFrame(){
         this.setMinimumSize(new Dimension(800, 600));
@@ -21,7 +20,7 @@ public class MainFrame extends JFrame {
         this.add(navBar, BorderLayout.WEST);
 
         //maze panel
-        MazePanel mazePanel = new MazePanel();
+        MazePanel mazePanel = new MazePanel(this);
         //scroll pane
         JScrollPane scrollMazePane = new JScrollPane(mazePanel);
         scrollMazePane.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_ALWAYS);
@@ -80,13 +79,12 @@ public class MainFrame extends JFrame {
         return j.getSelectedFile();
     }
     public void setNavbarStartEndButtonsEnabled(boolean enabled){
-        if(enabled){
-            navBar.EnableStartEndButtons();
-        }
-        else navBar.DisableStartEndButtons();
+        navBar.setEnabledStartEndButtons(enabled);
     }
-    public void WindowCLicked(int y, int x)
-    {
-        System.out.println(y + x);
+    public int getCurrentlyPressedNavbar(){
+        return navBar.getCurrentlyPressed();
+    }
+    public void unclickNavbarStartEndButtons(){
+        navBar.unclickButtons();
     }
 }
