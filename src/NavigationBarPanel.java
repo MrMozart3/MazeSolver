@@ -5,9 +5,11 @@ import java.awt.event.ActionListener;
 import java.beans.PropertyChangeListener;
 
 public class NavigationBarPanel extends JPanel {
+    private MainFrame mainFrame;
     private StartEndButton startButton, endButton;
     private int currentlyPressed = 0;
-    NavigationBarPanel(int width, int height){
+    NavigationBarPanel(MainFrame mainFrame, int width, int height){
+        this.mainFrame = mainFrame;
         this.setPreferredSize(new Dimension(width, height));
         this.setLayout(new BorderLayout());
 
@@ -24,10 +26,22 @@ public class NavigationBarPanel extends JPanel {
         this.endButton = new StartEndButton("End");
         buttonsPanel.add(this.endButton);
         //listeners
-        solveButton = new JButton("xd");
+        solveButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                MainFrame.mesLabel.ClearMessage();
+
+                currentlyPressed = 0;
+                startButton.unclick();
+                endButton.unclick();
+
+                mainFrame.SolveMaze();
+            }
+        });
         this.startButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                MainFrame.mesLabel.ClearMessage();
                 if(currentlyPressed == 1){
                     currentlyPressed = 0;
                     startButton.unclick();
@@ -42,6 +56,7 @@ public class NavigationBarPanel extends JPanel {
         this.endButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                MainFrame.mesLabel.ClearMessage();
                 if(currentlyPressed == 2){
                     currentlyPressed = 0;
                     endButton.unclick();

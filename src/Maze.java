@@ -22,6 +22,7 @@ public class Maze {
         endY = -1;
         endX = -1;
         loaded = false;
+        solved = false;
     }
 
     //encapsulation
@@ -60,6 +61,7 @@ public class Maze {
 
     //methods
     void SaveMazeFromTextFile(String fileName)  {
+        windows.clear();
         this.loaded = false;
         FileInputStream fis = null;
         List<String> rawMaze = new ArrayList<>();
@@ -188,10 +190,10 @@ public class Maze {
         //loaded finished successfully
         this.loaded = true;
     }
-    void FillMazeWithDistances(){
+    boolean FillMazeWithDistances(){
         if(!loaded){
-            System.out.println("Labirynt niezaladowany");
-            return;
+            MainFrame.mesLabel.CustomError("Labirynt niezaladowany");
+            return false;
         }
         int y = this.endY, x = this.endX;
         int distance = 1;
@@ -235,29 +237,48 @@ public class Maze {
             //if value 1(break loop)
             break;
         }
+        return getWindow(getStartX(), getStartY()).getDistance() != Integer.MAX_VALUE;
     }
-    void Solve(){
+    boolean Solve(){
         if(!loaded){
-            System.out.println("labirynt nie zaladowany");
+            MainFrame.mesLabel.CustomError("Labirynt niezaladowany");
+            return false;
+        }
+        if(!FillMazeWithDistances()){
+            MainFrame.mesLabel.CustomInformation("Labirynt nie do rozwiazania");
+            return false;
         }
         int y = this.startY, x = this.startX;
         int[] modY = {-1, 1, 0, 0};
         int[] modX = {0, 0, -1, 1};
 
 
-        while(y != this.endY && x != this.endX){
+        while(true){
+            boolean foundNext = false;
             MazeWindow curWindow = getWindow(x, y);
             for(int i = 0; i < 4; i++) {
-                if(!curWindow.getWall(i)){
-                    if(curWindow.getDistance() == getWindow(y + modY[i], x + modX[i]).getDistance() - 1){
-                        curWindow.setAnswer(true);
-                        y += modY[i];
-                        x += modX[i];
-                        break;
+                if (!curWindow.getWall(i)) {
+                    if (y + modY[i] >= 0 && y + modY[i] < this.sizeY && x + modX[i] >= 0 && x + modX[i] < this.sizeX) {
+                        if (curWindow.getDistance() - 1 == getWindow(x + modX[i], y + modY[i]).getDistance()) {
+                            curWindow.setAnswer(true);
+                            y += modY[i];
+                            x += modX[i];
+                            foundNext = true;
+                            break;
+                        }
                     }
                 }
             }
-
+            if(!foundNext){
+                if(curWindow.getDistance() == 1){
+                    curWindow.setAnswer(true);
+                    solved = true;
+                    return true;
+                }
+                else{
+                    return false;
+                }
+            }
         }
     }
     MazeWindow getWindow(int x, int y)

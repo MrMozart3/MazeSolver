@@ -6,7 +6,7 @@ import java.util.ArrayList;
 public class MazePanel extends JPanel{
     private Maze maze;
     private MainFrame mainFrame;
-    private int cellSize = 20;
+    private int cellSize = 10;
     ArrayList<ArrayList<MazeWindowPanel>> windows = new ArrayList<>();
     ArrayList<JPanel> rows = new ArrayList<>();
     ArrayList<Boolean> progress = new ArrayList<>();
@@ -65,22 +65,22 @@ public class MazePanel extends JPanel{
     public void WindowCLicked(int y, int x)
     {
         if(mainFrame.getCurrentlyPressedNavbar() == 1){
-            windows.get(maze.getStartY()).get(maze.getStartX()).ChangeBackground(WindowColor.EMPTY);
+            ClearAnswers();
             maze.setStart(x, y);
             mainFrame.unclickNavbarStartEndButtons();
-            windows.get(y).get(x).ChangeBackground(WindowColor.START);
             revalidate();
             repaint();
         }
         else if(mainFrame.getCurrentlyPressedNavbar() == 2){
-            windows.get(maze.getEndY()).get(maze.getEndX()).ChangeBackground(WindowColor.EMPTY);
+            ClearAnswers();
             maze.setEnd(x, y);
             mainFrame.unclickNavbarStartEndButtons();
-            windows.get(y).get(x).ChangeBackground(WindowColor.END);
             revalidate();
             repaint();
         }
-        System.out.println("y:" + y + " x:" + x +" cpn:" + mainFrame.getCurrentlyPressedNavbar() + " ans:" + maze.getWindow(x, y).isAnswer());
+        windows.get(maze.getStartY()).get(maze.getStartX()).ChangeBackground(WindowColor.START);
+        windows.get(maze.getEndY()).get(maze.getEndX()).ChangeBackground(WindowColor.END);
+        System.out.println("y:" + y + " x:" + x +" dis:" + maze.getWindow(x, y).getDistance() + " ans:" + maze.getWindow(x, y).getAnswer());
     }
     private class FillRowWorker extends SwingWorker<String, Object>
     {
@@ -109,8 +109,68 @@ public class MazePanel extends JPanel{
                 row.add(t);
             }
             progress.set(y, true);
-            System.out.println("done " + y);
             return "test";
+        }
+    }
+    public void Solve()
+    {
+        double start = (double)System.nanoTime();
+
+        if(maze.getStartX() == -1 || maze.getStartY() == -1 || maze.getEndX() == -1 && maze.getEndY() == -1){
+            MainFrame.mesLabel.CustomError("Brak poczatku lub / i konca labiryntu");
+            return;
+        }
+        if(maze.Solve()){
+            RenderAnswers();
+            MainFrame.mesLabel.CustomSuccess("Labirynt rozwiazano poprawnie");
+        }
+
+
+        System.out.println("maze to object:" + ((System.nanoTime() - start) / 1000000000));
+    }
+    private void RenderAnswers()
+    {
+        int[] modY = {-1, 1, 0, 0};
+        int[] modX = {0, 0, -1, 1};
+
+        for(int y = 0; y < maze.getSizeY(); y++)
+        {
+            for(int x = 0; x < maze.getSizeX(); x++)
+            {
+                for(int i = 0; i < 4; i++)
+                {
+                    if(maze.getWindow(x, y).getAnswer() && !maze.getWindow(x, y).getWall(i) && maze.getWindow(x + modX[i], y + modY[i]).getAnswer()){
+                        windows.get(y).get(x).ChangeBorder(i, BorderColor.ANSWER);
+                    }
+                    if(maze.getWindow(x, y).getAnswer()){
+                        if(x != maze.getStartX() || y != maze.getStartY()){
+                            if(x != maze.getEndX() || y != maze.getEndY()){
+                                windows.get(y).get(x).ChangeBackground(WindowColor.PATH);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        revalidate();
+        repaint();
+    }
+    private void ClearAnswers()
+    {
+        for(int y = 0; y < maze.getSizeY(); y++)
+        {
+            for(int x = 0; x < maze.getSizeX(); x++)
+            {
+                maze.getWindow(x, y).setAnswer(false);
+                maze.getWindow(x, y).setDistance(Integer.MAX_VALUE);
+                windows.get(y).get(x).ChangeBackground(WindowColor.EMPTY);
+                for(int i = 0; i < 4; i++)
+                {
+                    if(windows.get(y).get(x).isAnswerBorder(i)){
+                        windows.get(y).get(x).ChangeBorder(i, BorderColor.NONE);
+                    }
+                }
+            }
         }
     }
 }

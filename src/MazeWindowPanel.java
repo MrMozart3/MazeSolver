@@ -86,6 +86,21 @@ public class MazeWindowPanel extends JPanel {
         }
         RefreshBorder();
     }
+    public boolean isAnswerBorder(int borderIndex){
+        if(borderIndex == 0){
+            if(topBorder == BorderColor.ANSWER) return true;
+        }
+        else if(borderIndex == 1){
+            if(bottomBorder == BorderColor.ANSWER) return true;
+        }
+        else if(borderIndex == 2){
+            if(leftBorder == BorderColor.ANSWER) return true;
+        }
+        else if(borderIndex == 3){
+            if(rightBorder == BorderColor.ANSWER) return true;
+        }
+        return false;
+    }
     public void ChangeBackground(WindowColor color){
         Color startColor = Color.BLUE,
                 endColor = Color.GREEN,

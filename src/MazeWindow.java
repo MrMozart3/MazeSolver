@@ -46,7 +46,7 @@ public class MazeWindow {
     public int getDistance(){
         return this.distance;
     }
-    public boolean isAnswer(){
+    public boolean getAnswer(){
         return this.answer;
     }
     public void setAnswer(boolean answer){

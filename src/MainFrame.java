@@ -7,6 +7,7 @@ import java.io.File;
 
 
 public class MainFrame extends JFrame {
+    MazePanel mazePanel;
     public static MessageLabel mesLabel;
     private final NavigationBarPanel navBar;
     MainFrame(){
@@ -16,11 +17,11 @@ public class MainFrame extends JFrame {
         this.setResizable(true);
         this.setLocationRelativeTo(null);
         //navbar
-        navBar = new NavigationBarPanel(150, 200);
+        navBar = new NavigationBarPanel(this, 150, 200);
         this.add(navBar, BorderLayout.WEST);
 
         //maze panel
-        MazePanel mazePanel = new MazePanel(this);
+        mazePanel = new MazePanel(this);
         //scroll pane
         JScrollPane scrollMazePane = new JScrollPane(mazePanel);
         scrollMazePane.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_ALWAYS);
@@ -86,5 +87,8 @@ public class MainFrame extends JFrame {
     }
     public void unclickNavbarStartEndButtons(){
         navBar.unclickButtons();
+    }
+    public void SolveMaze(){
+        mazePanel.Solve();
     }
 }
