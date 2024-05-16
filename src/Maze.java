@@ -236,6 +236,30 @@ public class Maze {
             break;
         }
     }
+    void Solve(){
+        if(!loaded){
+            System.out.println("labirynt nie zaladowany");
+        }
+        int y = this.startY, x = this.startX;
+        int[] modY = {-1, 1, 0, 0};
+        int[] modX = {0, 0, -1, 1};
+
+
+        while(y != this.endY && x != this.endX){
+            MazeWindow curWindow = getWindow(x, y);
+            for(int i = 0; i < 4; i++) {
+                if(!curWindow.getWall(i)){
+                    if(curWindow.getDistance() == getWindow(y + modY[i], x + modX[i]).getDistance() - 1){
+                        curWindow.setAnswer(true);
+                        y += modY[i];
+                        x += modX[i];
+                        break;
+                    }
+                }
+            }
+
+        }
+    }
     MazeWindow getWindow(int x, int y)
     {
         if(x >= 0 && x < sizeX && y >= 0 && y < sizeY)

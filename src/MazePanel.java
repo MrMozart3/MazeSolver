@@ -1,18 +1,28 @@
 import javax.swing.*;
 import java.awt.*;
+import java.lang.reflect.Array;
+import java.util.ArrayList;
 
-public class MazePanel extends JPanel {
+public class MazePanel extends JPanel{
     private Maze maze;
     private MainFrame mainFrame;
+    private int cellSize = 20;
+    ArrayList<ArrayList<MazeWindowPanel>> windows = new ArrayList<>();
+    ArrayList<JPanel> rows = new ArrayList<>();
+    ArrayList<Boolean> progress = new ArrayList<>();
     MazePanel(MainFrame mainFrame){
         this.maze = new Maze();
         this.mainFrame = mainFrame;
-        this.setLayout(new GridLayout(1, 1));
+        this.setBorder(BorderFactory.createEmptyBorder(1, 1, 1, 1));
     }
     public void LoadMazeFromTextFile(String filename){
+        double start = (double)System.nanoTime();
         maze.SaveMazeFromTextFile(filename);
         if(maze.loaded) {
+            System.out.println("maze to object:" + ((System.nanoTime() - start) / 1000000000));
+            start = (double)System.nanoTime();
             RenderMaze();
+            System.out.println("rendering maze:" + ((System.nanoTime() - start) / 1000000000));
             MainFrame.mesLabel.CustomSuccess("LOADED MAZE SUCCESSFULLY");
             mainFrame.setNavbarStartEndButtonsEnabled(true);
         }
@@ -20,20 +30,70 @@ public class MazePanel extends JPanel {
             MainFrame.mesLabel.CustomError("ERROR WHILE LOADING MAZE");
             mainFrame.setNavbarStartEndButtonsEnabled(false);
         }
-
     }
     public void RenderMaze(){
         this.removeAll();
+        this.setLayout(new GridLayout(maze.getSizeY(), 1));
+        rows.clear();
+        progress.clear();
         if(!maze.loaded){
             MainFrame.mesLabel.CustomError("CANNOT RENDER MAZE WHEN ITS NOT LOADED");
             return;
         }
-        this.setLayout(new GridLayout(maze.getSizeY(), maze.getSizeX()));
         for(int y = 0; y < maze.getSizeY(); y++)
         {
+            rows.add(new JPanel(new GridLayout(1, maze.getSizeX())));
+            windows.add(new ArrayList<MazeWindowPanel>());
+            progress.add(false);
+            FillRowWorker w = new FillRowWorker(y);
+            w.execute();
+        }
+        for(int y = 0; y < maze.getSizeY(); y++)
+        {
+            if(!progress.get(y)){
+                y = 0;
+                continue;
+            }
+        }
+        for(int y = 0; y < maze.getSizeY(); y++)
+        {
+            this.add(rows.get(y));
+        }
+        revalidate();
+        repaint();
+    }
+    public void WindowCLicked(int y, int x)
+    {
+        if(mainFrame.getCurrentlyPressedNavbar() == 1){
+            windows.get(maze.getStartY()).get(maze.getStartX()).ChangeBackground(WindowColor.EMPTY);
+            maze.setStart(x, y);
+            mainFrame.unclickNavbarStartEndButtons();
+            windows.get(y).get(x).ChangeBackground(WindowColor.START);
+            revalidate();
+            repaint();
+        }
+        else if(mainFrame.getCurrentlyPressedNavbar() == 2){
+            windows.get(maze.getEndY()).get(maze.getEndX()).ChangeBackground(WindowColor.EMPTY);
+            maze.setEnd(x, y);
+            mainFrame.unclickNavbarStartEndButtons();
+            windows.get(y).get(x).ChangeBackground(WindowColor.END);
+            revalidate();
+            repaint();
+        }
+        System.out.println("y:" + y + " x:" + x +" cpn:" + mainFrame.getCurrentlyPressedNavbar() + " ans:" + maze.getWindow(x, y).isAnswer());
+    }
+    private class FillRowWorker extends SwingWorker<String, Object>
+    {
+        int y;
+        FillRowWorker(int y){
+            this.y = y;
+        }
+        @Override
+        public String doInBackground(){
+            JPanel row = rows.get(y);
             for(int x = 0; x < maze.getSizeX(); x++)
             {
-                MazeWindowPanel t = new MazeWindowPanel(this, 10, 10, y, x, 1);
+                MazeWindowPanel t = new MazeWindowPanel(MazePanel.this, MazePanel.this.cellSize, MazePanel.this.cellSize, this.y, x, 1);
                 for(int i = 0; i < 4; i++) {
                     if (maze.getWindow(x, y).getWall(i)) {
                         t.ChangeBorder(i, BorderColor.WALL);
@@ -45,24 +105,12 @@ public class MazePanel extends JPanel {
                 if(y == maze.getEndY() && x == maze.getEndX()){
                     t.ChangeBackground(WindowColor.END);
                 }
-                this.add(t);
+                windows.get(y).add(x, t);
+                row.add(t);
             }
+            progress.set(y, true);
+            System.out.println("done " + y);
+            return "test";
         }
-        revalidate();
-        repaint();
-    }
-    public void WindowCLicked(int y, int x)
-    {
-        if(mainFrame.getCurrentlyPressedNavbar() == 1){
-            maze.setStart(x, y);
-            mainFrame.unclickNavbarStartEndButtons();
-            RenderMaze();
-        }
-        else if(mainFrame.getCurrentlyPressedNavbar() == 2){
-            maze.setEnd(x, y);
-            mainFrame.unclickNavbarStartEndButtons();
-            RenderMaze();
-        }
-        System.out.println("y:" + y + " x:" + x +" cpn:" + mainFrame.getCurrentlyPressedNavbar());
     }
 }

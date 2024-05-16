@@ -24,6 +24,7 @@ public class NavigationBarPanel extends JPanel {
         this.endButton = new StartEndButton("End");
         buttonsPanel.add(this.endButton);
         //listeners
+        solveButton = new JButton("xd");
         this.startButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {

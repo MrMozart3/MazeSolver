@@ -1,10 +1,12 @@
 public class MazeWindow {
     private boolean[] walls;
     private int distance;
+    private boolean answer;
     MazeWindow()
     {
         walls = new boolean[4];
         distance = -1;
+        answer = false;
     }
     MazeWindow(boolean topWall, boolean bottomWall, boolean leftWall, boolean rightWall)
     {
@@ -40,10 +42,15 @@ public class MazeWindow {
     public void setDistance(int distance)
     {
         this.distance = distance;
-        return;
     }
     public int getDistance(){
         return this.distance;
+    }
+    public boolean isAnswer(){
+        return this.answer;
+    }
+    public void setAnswer(boolean answer){
+        this.answer = answer;
     }
     @Override
     public String toString()
