@@ -6,7 +6,7 @@ import java.util.ArrayList;
 public class MazePanel extends JPanel{
     private Maze maze;
     private MainFrame mainFrame;
-    private int cellSize = 10;
+    private int cellSize = 2;
     ArrayList<ArrayList<MazeWindowPanel>> windows = new ArrayList<>();
     ArrayList<JPanel> rows = new ArrayList<>();
     ArrayList<Boolean> progress = new ArrayList<>();

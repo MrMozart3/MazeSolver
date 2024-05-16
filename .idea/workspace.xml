@@ -4,14 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ff61fd88-ea13-43d5-9ae3-cfe629b2e4b1" name="Changes" comment="splitted the display work to swingworkers to boost performance">
+    <list default="true" id="ff61fd88-ea13-43d5-9ae3-cfe629b2e4b1" name="Changes" comment="Working answers">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MainFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MainFrame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Maze.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Maze.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mazes/maze_10.txt" beforeDir="false" afterPath="$PROJECT_DIR$/mazes/maze_10.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/MazePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MazePanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MazeWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MazeWindow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MazeWindowPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MazeWindowPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/NavigationBarPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/NavigationBarPanel.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,7 +102,7 @@
       <workItem from="1715699246956" duration="7514000" />
       <workItem from="1715711557375" duration="5533000" />
       <workItem from="1715766122755" duration="21127000" />
-      <workItem from="1715851815654" duration="9535000" />
+      <workItem from="1715851815654" duration="10171000" />
     </task>
     <task id="LOCAL-00001" summary="Second commit">
       <option name="closed" value="true" />
@@ -156,7 +152,15 @@
       <option name="project" value="LOCAL" />
       <updated>1715856567827</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Working answers">
+      <option name="closed" value="true" />
+      <created>1715861369019</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1715861369019</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -180,6 +184,7 @@
     <MESSAGE value="Added UI to display mazes, file text import" />
     <MESSAGE value="added changing start and end" />
     <MESSAGE value="splitted the display work to swingworkers to boost performance" />
-    <option name="LAST_COMMIT_MESSAGE" value="splitted the display work to swingworkers to boost performance" />
+    <MESSAGE value="Working answers" />
+    <option name="LAST_COMMIT_MESSAGE" value="Working answers" />
   </component>
 </project>
