@@ -6,7 +6,7 @@ import java.util.ArrayList;
 public class MazePanel extends JPanel{
     private Maze maze;
     private MainFrame mainFrame;
-    private int cellSize = 2;
+    private int cellSize = 10;
     ArrayList<ArrayList<MazeWindowPanel>> windows = new ArrayList<>();
     ArrayList<JPanel> rows = new ArrayList<>();
     ArrayList<Boolean> progress = new ArrayList<>();
@@ -68,6 +68,10 @@ public class MazePanel extends JPanel{
             ClearAnswers();
             maze.setStart(x, y);
             mainFrame.unclickNavbarStartEndButtons();
+            if(maze.getStartX() != -1 && maze.getStartY() != -1)
+                windows.get(maze.getStartY()).get(maze.getStartX()).ChangeBackground(WindowColor.START);
+            if(maze.getEndX() != -1 && maze.getEndY() != -1)
+                windows.get(maze.getEndY()).get(maze.getEndX()).ChangeBackground(WindowColor.END);
             revalidate();
             repaint();
         }
@@ -75,11 +79,15 @@ public class MazePanel extends JPanel{
             ClearAnswers();
             maze.setEnd(x, y);
             mainFrame.unclickNavbarStartEndButtons();
+            if(maze.getStartX() != -1 && maze.getStartY() != -1)
+                windows.get(maze.getStartY()).get(maze.getStartX()).ChangeBackground(WindowColor.START);
+            if(maze.getEndX() != -1 && maze.getEndY() != -1)
+                windows.get(maze.getEndY()).get(maze.getEndX()).ChangeBackground(WindowColor.END);
             revalidate();
             repaint();
         }
-        windows.get(maze.getStartY()).get(maze.getStartX()).ChangeBackground(WindowColor.START);
-        windows.get(maze.getEndY()).get(maze.getEndX()).ChangeBackground(WindowColor.END);
+
+
         System.out.println("y:" + y + " x:" + x +" dis:" + maze.getWindow(x, y).getDistance() + " ans:" + maze.getWindow(x, y).getAnswer());
     }
     private class FillRowWorker extends SwingWorker<String, Object>

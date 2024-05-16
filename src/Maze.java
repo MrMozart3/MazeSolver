@@ -62,7 +62,15 @@ public class Maze {
     //methods
     void SaveMazeFromTextFile(String fileName)  {
         windows.clear();
+        sizeX = -1;
+        sizeY = -1;
+        startY = -1;
+        startX = -1;
+        endY = -1;
+        endX = -1;
+        solved = false;
         this.loaded = false;
+
         FileInputStream fis = null;
         List<String> rawMaze = new ArrayList<>();
         try{
