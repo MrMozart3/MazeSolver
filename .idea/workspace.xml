@@ -5,9 +5,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ff61fd88-ea13-43d5-9ae3-cfe629b2e4b1" name="Changes" comment="changed maze_10">
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Maze.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Maze.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MazePanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/MazePanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mazes/maze_10.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mazes/maze_1024.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mazes/maze_200.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mazes/maze_3.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mazes/maze_50.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mazes/maze_512.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/BorderColor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/BorderColor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MainFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MainFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Maze.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Maze.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MazePanel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MazeWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MazeWindow.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MazeWindowPanel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MessageLabel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MessageLabel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/NavigationBarPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/NavigationBarPanel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/StartEndButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/StartEndButton.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/WindowColor.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,6 +46,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "MrMozart3"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/MrMozart3/MazeSolver.git",
+    "accountId": "0a46f130-da02-4e29-81ee-6210bfc2b8b4"
+  }
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
 }</component>
@@ -34,47 +67,119 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Main.executor": "Run",
+    "Maven.MazeSolver [clean,package].executor": "Run",
+    "Maven.MazeSolver [clean].executor": "Run",
+    "Maven.MazeSolver [compile].executor": "Run",
+    "Maven.MazeSolver [deploy].executor": "Run",
+    "Maven.MazeSolver [install].executor": "Run",
+    "Maven.MazeSolver [package].executor": "Run",
+    "Maven.MazeSolver [site:run].executor": "Run",
+    "Maven.MazeSolver [test].executor": "Run",
+    "Maven.MazeSolver [validate].executor": "Run",
+    "Maven.MazeSolver [verify].executor": "Run",
+    "Maven.Unknown [clean].executor": "Run",
+    "Maven.Unknown [compile].executor": "Run",
+    "Maven.Unknown [test].executor": "Run",
+    "Maven.Unknown [validate].executor": "Run",
+    "Maven.Unknown [verify].executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "run.code.analysis.last.selected.profile": "pProject Default",
+    "settings.editor.selected.configurable": "MavenSettings",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\MrMozartOfficial\IdeaProjects\MazeCheckerTemporary\mazes" />
       <recent name="C:\Users\MrMozartOfficial\IdeaProjects\MazeCheckerTemporary\src" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="mvn site:run" />
+    </option>
+  </component>
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application">
+      <option name="ALTERNATIVE_JRE_PATH" value="openjdk-22" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="MazeCheckerTemporary" />
+      <option name="PROGRAM_PARAMETERS" value="--enable-preview" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
       <module name="MazeSolver" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="MazeSolver" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MazeSolver [clean,package]" type="MavenRunConfiguration" factoryName="Maven" nameIsGenerated="true">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="cmdOptions" />
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="clean" />
+                <option value="package" />
+              </list>
+            </option>
+            <option name="multimoduleDir" />
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="projectsCmdOptionValues">
+              <list />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Application.Main" />
+      <item itemvalue="Maven.MazeSolver [clean,package]" />
+    </list>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="jdk-22-openjdk-22-4caba194b151-f504ca98" />
+        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.17011.79" />
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-IU-241.17011.79" />
       </set>
     </attachedChunks>
   </component>
@@ -104,6 +209,11 @@
       <workItem from="1715766122755" duration="21127000" />
       <workItem from="1715851815654" duration="10226000" />
       <workItem from="1715880621338" duration="2841000" />
+      <workItem from="1715891660462" duration="28000" />
+      <workItem from="1715982593280" duration="1668000" />
+      <workItem from="1716062825447" duration="300000" />
+      <workItem from="1716717820501" duration="221000" />
+      <workItem from="1717075227192" duration="1401000" />
     </task>
     <task id="LOCAL-00001" summary="Second commit">
       <option name="closed" value="true" />
@@ -177,7 +287,15 @@
       <option name="project" value="LOCAL" />
       <updated>1715862035046</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="changed maze_10">
+      <option name="closed" value="true" />
+      <created>1715891681194</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1715891681194</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
