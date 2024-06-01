@@ -4,31 +4,49 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ff61fd88-ea13-43d5-9ae3-cfe629b2e4b1" name="Changes" comment="changed maze_10">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+    <list default="true" id="ff61fd88-ea13-43d5-9ae3-cfe629b2e4b1" name="Changes" comment="Changed to maven">
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mazes/maze_10.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mazes/maze_1024.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mazes/maze_200.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mazes/maze_3.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mazes/maze_50.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mazes/maze_512.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/BorderColor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/BorderColor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MainFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MainFrame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Maze.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Maze.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MazePanel.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MazeWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MazeWindow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MazeWindowPanel.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/MessageLabel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MessageLabel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/NavigationBarPanel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/NavigationBarPanel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/StartEndButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/StartEndButton.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/WindowColor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Maze.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Maze.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/maze.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/maze_10.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/maze_1024.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/maze_200.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/maze_3.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/maze_50.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/maze_512.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/MazeSolver-1.0-SNAPSHOT.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/BorderColor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/BorderColor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/MainFrame$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/MainFrame$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/MainFrame$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/MainFrame$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/MainFrame$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/MainFrame$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/MainFrame$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/MainFrame$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/MainFrame$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/MainFrame$5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/MainFrame$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/MainFrame$6.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/MainFrame$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/MainFrame$7.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/MainFrame.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/MainFrame.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Maze.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Maze.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/MazeColors.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/MazeColors.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/MazeLabel$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/MazeLabel$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/MazeLabel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/MazeLabel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/MazeWindow.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/MazeWindow.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/MessageLabel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/MessageLabel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/NavigationBarPanel$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/NavigationBarPanel$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/NavigationBarPanel$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/NavigationBarPanel$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/NavigationBarPanel$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/NavigationBarPanel$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/NavigationBarPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/NavigationBarPanel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/StartEndButton.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/StartEndButton.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/ZoomClass.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ZoomClass.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/maze.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/maze_10.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/maze_1024.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/maze_200.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/maze_3.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/maze_50.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/maze_512.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,18 +64,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "MrMozart3"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;MrMozart3&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/MrMozart3/MazeSolver.git",
-    "accountId": "0a46f130-da02-4e29-81ee-6210bfc2b8b4"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/MrMozart3/MazeSolver.git&quot;,
+    &quot;accountId&quot;: &quot;0a46f130-da02-4e29-81ee-6210bfc2b8b4&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
 }</component>
@@ -67,43 +85,43 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Main.executor": "Run",
-    "Maven.MazeSolver [clean,package].executor": "Run",
-    "Maven.MazeSolver [clean].executor": "Run",
-    "Maven.MazeSolver [compile].executor": "Run",
-    "Maven.MazeSolver [deploy].executor": "Run",
-    "Maven.MazeSolver [install].executor": "Run",
-    "Maven.MazeSolver [package].executor": "Run",
-    "Maven.MazeSolver [site:run].executor": "Run",
-    "Maven.MazeSolver [test].executor": "Run",
-    "Maven.MazeSolver [validate].executor": "Run",
-    "Maven.MazeSolver [verify].executor": "Run",
-    "Maven.Unknown [clean].executor": "Run",
-    "Maven.Unknown [compile].executor": "Run",
-    "Maven.Unknown [test].executor": "Run",
-    "Maven.Unknown [validate].executor": "Run",
-    "Maven.Unknown [verify].executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "master",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "MavenSettings",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Maven.MazeSolver [clean,package].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.MazeSolver [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.MazeSolver [compile].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.MazeSolver [deploy].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.MazeSolver [install].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.MazeSolver [package].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.MazeSolver [site:run].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.MazeSolver [test].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.MazeSolver [validate].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.MazeSolver [verify].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.Unknown [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.Unknown [compile].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.Unknown [test].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.Unknown [validate].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.Unknown [verify].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propCompiler&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\MrMozartOfficial\IdeaProjects\MazeCheckerTemporary\mazes" />
@@ -118,7 +136,6 @@
   <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application">
       <option name="ALTERNATIVE_JRE_PATH" value="openjdk-22" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="MazeCheckerTemporary" />
       <option name="PROGRAM_PARAMETERS" value="--enable-preview" />
@@ -213,7 +230,10 @@
       <workItem from="1715982593280" duration="1668000" />
       <workItem from="1716062825447" duration="300000" />
       <workItem from="1716717820501" duration="221000" />
-      <workItem from="1717075227192" duration="1401000" />
+      <workItem from="1717075227192" duration="1467000" />
+      <workItem from="1717234322451" duration="80000" />
+      <workItem from="1717236210046" duration="1854000" />
+      <workItem from="1717238077511" duration="958000" />
     </task>
     <task id="LOCAL-00001" summary="Second commit">
       <option name="closed" value="true" />
@@ -295,7 +315,23 @@
       <option name="project" value="LOCAL" />
       <updated>1715891681194</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Changed to maven">
+      <option name="closed" value="true" />
+      <created>1717076651731</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1717076651731</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Changed to maven">
+      <option name="closed" value="true" />
+      <created>1717234356469</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1717234356469</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -321,6 +357,7 @@
     <MESSAGE value="splitted the display work to swingworkers to boost performance" />
     <MESSAGE value="Working answers" />
     <MESSAGE value="changed maze_10" />
-    <option name="LAST_COMMIT_MESSAGE" value="changed maze_10" />
+    <MESSAGE value="Changed to maven" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changed to maven" />
   </component>
 </project>

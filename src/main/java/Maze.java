@@ -293,31 +293,31 @@ public class Maze {
         }
         if(!isGood) return;
         //removing last
-        if(rawMaze.getLast().isEmpty()) rawMaze.removeLast();
+        if(rawMaze.get(rawMaze.size() - 1).isEmpty()) rawMaze.remove(rawMaze.size() - 1);
         //checking if not odd
-        if(rawMaze.getFirst().length() % 2 == 0 || rawMaze.size() % 2 == 0){
+        if(rawMaze.get(0).length() % 2 == 0 || rawMaze.size() % 2 == 0){
             System.out.println("Blad w pliku z danymi |1|");
             return;
         }
         //verifying rawMaze lengths
         for(int y = 1; y < rawMaze.size(); y++)
         {
-            if(rawMaze.get(y).length() != rawMaze.getFirst().length()){
+            if(rawMaze.get(y).length() != rawMaze.get(0).length()){
                 System.out.println("Blad w pliku z danymi |2|");
                 return;
             }
         }
         //checking border (top, bottom)
-        for(int x = 0; x < rawMaze.getFirst().length(); x++)
+        for(int x = 0; x < rawMaze.get(0).length(); x++)
         {
             //top
-            char tempChar1 = rawMaze.getFirst().charAt(x);
+            char tempChar1 = rawMaze.get(0).charAt(x);
             if(tempChar1 != 'X' && tempChar1 != 'P' && tempChar1 != 'K'){
                 System.out.println("Blad w pliku z danymi |3|");
                 return;
             }
             //bottom
-            char tempChar2 = rawMaze.getLast().charAt(x);
+            char tempChar2 = rawMaze.get(rawMaze.size() - 1).charAt(x);
             if(tempChar2 != 'X' && tempChar2 != 'P' && tempChar2 != 'K'){
                 System.out.println("Blad w pliku z danymi |4|");
                 return;
@@ -340,7 +340,7 @@ public class Maze {
         //checking corners
         for(int y = 1; y < rawMaze.size(); y+=2)
         {
-            for(int x = 1; x < rawMaze.getFirst().length(); x+= 2)
+            for(int x = 1; x < rawMaze.get(0).length(); x+= 2)
             {
                 int[] modY = {-1, -1, 1, 1};
                 int[] modX = {-1, 1, -1, 1};
@@ -353,7 +353,7 @@ public class Maze {
             }
         }
         //sizeX and sizeY
-        this.sizeX = rawMaze.getFirst().length() / 2;
+        this.sizeX = rawMaze.get(0).length() / 2;
         this.sizeY = rawMaze.size() / 2;
         if(this.sizeX < 2 || this.sizeY < 2){
             System.out.println("Zbyt maly Labirynt");
@@ -363,7 +363,7 @@ public class Maze {
         for(int y = 1; y < rawMaze.size(); y+=2)
         {
             ArrayList<MazeWindow> tempList = new ArrayList<>();
-            for(int x = 1; x < rawMaze.getFirst().length(); x+=2)
+            for(int x = 1; x < rawMaze.get(0).length(); x+=2)
             {
                 int[] modY = {-1, 1, 0, 0};
                 int[] modX = {0, 0, -1, 1};
