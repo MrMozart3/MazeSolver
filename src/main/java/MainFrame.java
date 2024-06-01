@@ -160,6 +160,9 @@ public class MainFrame extends JFrame {
             mesLabel.CustomInformation("NONE FILES SELECTED");
             return;
         }
+        if(!file.toString().endsWith(".png")){
+            file = new File(file.toString() + ".png");
+        }
         mazeLabel.GeneratePNG(file.toString());
     }
     //save to text

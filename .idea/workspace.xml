@@ -5,48 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ff61fd88-ea13-43d5-9ae3-cfe629b2e4b1" name="Changes" comment="Changed to maven">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Maze.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Maze.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/maze.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/maze_10.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/maze_1024.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/maze_200.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/maze_3.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/maze_50.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/maze_512.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/MazeSolver-1.0-SNAPSHOT.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/BorderColor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/BorderColor.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/MainFrame$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/MainFrame$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/MainFrame$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/MainFrame$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/MainFrame$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/MainFrame$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/MainFrame$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/MainFrame$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/MainFrame$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/MainFrame$5.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/MainFrame$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/MainFrame$6.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/MainFrame$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/MainFrame$7.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/MainFrame.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/MainFrame.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Maze.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Maze.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/MazeColors.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/MazeColors.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/MazeLabel$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/MazeLabel$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/MazeLabel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/MazeLabel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/MazeWindow.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/MazeWindow.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/MessageLabel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/MessageLabel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/NavigationBarPanel$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/NavigationBarPanel$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/NavigationBarPanel$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/NavigationBarPanel$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/NavigationBarPanel$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/NavigationBarPanel$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/NavigationBarPanel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/NavigationBarPanel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/StartEndButton.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/StartEndButton.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/ZoomClass.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/ZoomClass.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/maze.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/maze_10.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/maze_1024.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/maze_200.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/maze_3.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/maze_50.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/maze_512.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,6 +36,9 @@
     &quot;accountId&quot;: &quot;0a46f130-da02-4e29-81ee-6210bfc2b8b4&quot;
   }
 }</component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
 }</component>
@@ -106,6 +69,7 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;full.screen.before.presentation.mode&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
@@ -233,7 +197,10 @@
       <workItem from="1717075227192" duration="1467000" />
       <workItem from="1717234322451" duration="80000" />
       <workItem from="1717236210046" duration="1854000" />
-      <workItem from="1717238077511" duration="958000" />
+      <workItem from="1717238077511" duration="1117000" />
+      <workItem from="1717245253368" duration="36000" />
+      <workItem from="1717245295228" duration="7000" />
+      <workItem from="1717245308129" duration="874000" />
     </task>
     <task id="LOCAL-00001" summary="Second commit">
       <option name="closed" value="true" />
@@ -331,7 +298,15 @@
       <option name="project" value="LOCAL" />
       <updated>1717234356469</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Changed to maven">
+      <option name="closed" value="true" />
+      <created>1717239593489</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1717239593490</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

@@ -561,8 +561,10 @@ public class Maze {
         if(image != null){
             try {
                 ImageIO.write(image, "png", new File(fileName));
+                MainFrame.mesLabel.CustomSuccess("Zapisano obrazek poprawnie");
             } catch (IOException e) {
                 e.printStackTrace();
+                MainFrame.mesLabel.CustomError("Blad przy zapisywaniu obrazka");
             }
         }
     }
