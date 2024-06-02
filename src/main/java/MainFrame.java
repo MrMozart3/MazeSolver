@@ -175,6 +175,9 @@ public class MainFrame extends JFrame {
             mesLabel.CustomInformation("NONE FILES SELECTED");
             return;
         }
+        if(!file.toString().endsWith(".txt")){
+            file = new File(file.toString() + ".txt");
+        }
         mazeLabel.SaveMazeToTextFile(file.toString());
     }
     public void setNavbarStartEndButtonsEnabled(boolean enabled){

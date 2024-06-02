@@ -4,9 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ff61fd88-ea13-43d5-9ae3-cfe629b2e4b1" name="Changes" comment="Changed to maven">
+    <list default="true" id="ff61fd88-ea13-43d5-9ae3-cfe629b2e4b1" name="Changes" comment="changes in png">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/MainFrame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MainFrame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/BorderColor.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/MainFrame.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/MainFrame.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Maze.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Maze.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -201,6 +204,9 @@
       <workItem from="1717245253368" duration="36000" />
       <workItem from="1717245295228" duration="7000" />
       <workItem from="1717245308129" duration="874000" />
+      <workItem from="1717248334406" duration="205000" />
+      <workItem from="1717258101634" duration="364000" />
+      <workItem from="1717348586493" duration="1391000" />
     </task>
     <task id="LOCAL-00001" summary="Second commit">
       <option name="closed" value="true" />
@@ -306,7 +312,15 @@
       <option name="project" value="LOCAL" />
       <updated>1717239593490</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="changes in png">
+      <option name="closed" value="true" />
+      <created>1717248533710</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1717248533710</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -333,6 +347,7 @@
     <MESSAGE value="Working answers" />
     <MESSAGE value="changed maze_10" />
     <MESSAGE value="Changed to maven" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changed to maven" />
+    <MESSAGE value="changes in png" />
+    <option name="LAST_COMMIT_MESSAGE" value="changes in png" />
   </component>
 </project>
